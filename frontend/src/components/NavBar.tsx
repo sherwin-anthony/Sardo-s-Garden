@@ -55,13 +55,13 @@ export default function NavBar({ logoHref = '#top' }: NavBarProps) {
           : 'md:translate-y-0 md:opacity-100 backdrop-blur-md'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
         <a className="flex items-center gap-3 text-white" href={logoHref} aria-label="Back to top">
-          <div className="h-20 w-20 overflow-hidden rounded-full bg-white/90 ring-2 ring-white/10">
+          <div className="h-14 w-14 overflow-hidden rounded-full bg-white/90 ring-2 ring-white/10 sm:h-20 sm:w-20">
             <img src={logo} alt="Sardo's Garden logo" className="h-full w-full object-contain p-1" />
           </div>
           <div className="leading-tight">
-            <p className="font-display text-xl">Sardo's Garden</p>
+            <p className="font-display text-lg sm:text-xl">Sardo's Garden</p>
           </div>
         </a>
         <nav className="hidden items-center gap-6 text-sm text-white/80 md:flex" aria-label="Primary">

@@ -127,7 +127,7 @@ export default function BeforeAfterShowcase() {
             afterImage={featuredProject.afterImage}
             value={sliderValue}
             onChange={setSliderValue}
-            heightClass="h-[380px] sm:h-[460px]"
+            heightClass="h-[240px] sm:h-[360px] lg:h-[460px]"
             mode={viewMode}
           />
 
@@ -149,14 +149,7 @@ export default function BeforeAfterShowcase() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <a
-            href="#portfolio-all"
-            className="rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-600"
-          >
-            View More Landscape Projects
-          </a>
-        </div>
+        
       </div>
     </section>
   )

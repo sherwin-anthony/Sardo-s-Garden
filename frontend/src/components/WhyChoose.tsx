@@ -68,7 +68,7 @@ export default function WhyChoose() {
               <h3 className="font-display mt-5 text-xl text-[color:var(--forest-900)]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-l text-[color:var(--forest-800)]">{item.description}</p>
+              <p className="mt-3 text-sm text-[color:var(--forest-800)] sm:text-base">{item.description}</p>
             </div>
           ))}
         </div>
@@ -105,18 +105,18 @@ export default function WhyChoose() {
 
           <div
             ref={trustedRef}
-            className="mt-2 flex gap -2 overflow-x-auto scroll-smooth pb-2"
+            className="mt-2 flex gap-2 overflow-x-auto scroll-smooth pb-2"
           >
             {trustedCards.map((card) => (
               <div
                 key={card.id}
                 data-trusted-card
-                className="min-w-[220px] flex-1 rounded-2xl border border-emerald-100/100 bg-white p-4 shadow-sm"
+                className="min-w-[200px] flex-1 rounded-2xl border border-emerald-100/100 bg-white p-4 shadow-sm sm:min-w-[220px]"
               >
                 <img
                   src={card.src}
                   alt={card.alt}
-                  className="h-50 w-full object-contain"
+                  className="h-32 w-full object-contain sm:h-40"
                   loading="lazy"
                   decoding="async"
                 />
@@ -125,9 +125,9 @@ export default function WhyChoose() {
           </div>
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-3xl border border-emerald-100/70 bg-black shadow-[var(--shadow-md)]">
+        <div className="mt-10 aspect-[16/9] overflow-hidden rounded-3xl border border-emerald-100/70 bg-black shadow-[var(--shadow-md)]">
           <video
-            className="h-130 w-full object-cover sm:h-130"
+            className="h-full w-full object-cover"
             src={awardeeVideo}
             autoPlay
             loop

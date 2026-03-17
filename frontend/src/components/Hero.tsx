@@ -3,7 +3,7 @@ import { company, hero } from '../data/siteData'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative isolate min-h-[85vh] overflow-hidden pt-24">
+    <section id="top" className="relative isolate min-h-[70vh] overflow-hidden pt-20 sm:min-h-[85vh] sm:pt-24">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${hero.image})` }}
@@ -15,16 +15,16 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 pb-20 pt-8 sm:px-6 md:grid-cols-[1.15fr_0.85fr] md:pt-12">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 px-4 pb-20 pt-8 sm:gap-10 sm:px-6 md:grid-cols-[1.15fr_0.85fr] md:pt-12">
         <div className="text-white">
           <div className="flex items-center gap-3 text-white/90 animate-fade">
            
             <p className="text-xs uppercase tracking-[0.5em] text-emerald-200">Outdoor Living</p>
           </div>
-          <h1 className="font-display mt-4 text-4xl leading-tight sm:text-5xl lg:text-6xl animate-rise">
+          <h1 className="font-display mt-4 text-3xl leading-tight sm:text-5xl lg:text-6xl animate-rise">
             {hero.headline}
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/85 animate-rise">
+          <p className="mt-5 max-w-xl text-base text-white/85 sm:text-lg animate-rise">
             {hero.subheadline}
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -57,7 +57,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-white/12 p-6 text-white backdrop-blur-md ring-1 ring-white/20">
+        <div className="rounded-2xl bg-white/12 p-5 text-white backdrop-blur-md ring-1 ring-white/20 sm:p-6">
           <p className="text-xs uppercase tracking-[0.4em] text-white/60">Free Onsite Estimate</p>
           <h3 className="font-display mt-4 text-2xl">Your yard, reimagined</h3>
           <p className="mt-3 text-sm text-white/80">

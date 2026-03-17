@@ -5,7 +5,7 @@ export default function ContactForm() {
   return (
     <section id="quote" className="py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-2xl bg-[color:var(--forest-900)] p-8 text-white shadow-[var(--shadow-lg)]">
+        <div className="rounded-2xl bg-[color:var(--forest-900)] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
           <div className="flex items-center gap-3">
             <SectionIcon className="h-12 w-16 bg-white/95 ring-white/30" />
             <h2 className="font-display text-3xl text-white sm:text-4xl">Contact:</h2>
@@ -30,7 +30,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <form className="rounded-2xl border border-emerald-100/70 bg-white/90 p-8 shadow-[var(--shadow-md)]">
+        <form className="rounded-2xl border border-emerald-100/70 bg-white/90 p-6 shadow-[var(--shadow-md)] sm:p-8">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="text-sm font-semibold text-[color:var(--forest-900)]">
               Name

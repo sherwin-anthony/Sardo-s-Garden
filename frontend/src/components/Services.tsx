@@ -41,7 +41,9 @@ export default function Services() {
                 />
               </div>
               <h3 className="font-display mt-5 text-xl text-[color:var(--forest-900)]">{service.title}</h3>
-              <p className="mt-4 text-l text-[color:var(--forest-800)]">{service.description}</p>
+              <p className="mt-4 text-sm text-[color:var(--forest-800)] sm:text-base">
+                {service.description}
+              </p>
              
             </article>
           ))}

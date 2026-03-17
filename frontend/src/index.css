@@ -30,6 +30,8 @@ body {
     radial-gradient(1200px 800px at 10% -10%, #e8f2e5 0%, transparent 60%),
     radial-gradient(800px 600px at 90% 0%, #f1e9d8 0%, transparent 50%),
     var(--sunlit);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .font-display {
@@ -124,6 +126,18 @@ a{
 
 .plant-card-back {
   transform: rotateY(180deg);
+}
+
+@media (max-width: 640px) {
+  .plant-card {
+    width: 220px;
+    height: 380px;
+    padding: 1rem;
+  }
+
+  .marquee-row {
+    padding: 0 1rem;
+  }
 }
 
 @keyframes marquee-left {
