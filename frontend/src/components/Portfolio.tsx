@@ -4,49 +4,74 @@ import SectionIcon from './SectionIcon'
 
 const allFilter = 'All'
 
-export default function Portfolio() {
+type PortfolioProps = {
+  limit?: number
+  showSeeMore?: boolean
+  sectionId?: string
+  showBack?: boolean
+  backHref?: string
+}
+
+export default function Portfolio({
+  limit,
+  showSeeMore = false,
+  sectionId = 'portfolio',
+  showBack = false,
+  backHref = '#BeforeAfterShowcase',
+}: PortfolioProps) {
   const [activeFilter, setActiveFilter] = useState<string>(allFilter)
 
   const filters = [allFilter, ...Array.from(new Set(portfolio.map((item) => item.category)))]
   const filteredItems =
     activeFilter === allFilter ? portfolio : portfolio.filter((item) => item.category === activeFilter)
+  const visibleItems = typeof limit === 'number' ? filteredItems.slice(0, limit) : filteredItems
+  const canSeeMore = showSeeMore && typeof limit === 'number' && portfolio.length > limit
 
   return (
-    <section id="portfolio" className="py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id={sectionId} className="py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-3">
               <SectionIcon />
-              <p className="text-xs uppercase tracking-[0.4em] text-emerald-700/80">Portfolio</p>
+              <h2 className="font-display text-3xl text-[color:var(--forest-900)] sm:text-4xl">
+                Landscape Projects (Portfolio)
+              </h2>
             </div>
-            <h2 className="font-display mt-4 text-3xl text-[color:var(--forest-900)] sm:text-4xl">
-              Outdoor spaces designed with intention
-            </h2>
-            <p className="mt-3 max-w-xl text-sm text-[color:var(--forest-800)]">
+            <p className="mt-1 max-w-xl text-sm text-[color:var(--forest-800)]">
               Explore recent transformations across residential and commercial properties.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => setActiveFilter(filter)}
-                className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
-                  activeFilter === filter
-                    ? 'border-emerald-500 bg-emerald-500 text-white shadow-md'
-                    : 'border-emerald-200 text-emerald-900 hover:border-emerald-300 hover:bg-emerald-50'
-                }`}
+          <div className="flex flex-wrap items-center gap-3">
+            {showBack && (
+              <a
+                className="rounded-full border border-emerald-300 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-900 transition hover:border-emerald-400 hover:bg-emerald-50"
+                href={backHref}
               >
-                {filter}
-              </button>
-            ))}
+                Back
+              </a>
+            )}
+            <div className="flex flex-wrap gap-3">
+              {filters.map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                    activeFilter === filter
+                      ? 'border-emerald-500 bg-emerald-500 text-white shadow-md'
+                      : 'border-emerald-200 text-emerald-900 hover:border-emerald-300 hover:bg-emerald-50'
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredItems.map((item) => (
+          {visibleItems.map((item) => (
             <figure
               key={item.id}
               className="group overflow-hidden rounded-2xl border border-emerald-100/70 bg-white/80 shadow-[var(--shadow-md)]"
@@ -68,6 +93,16 @@ export default function Portfolio() {
             </figure>
           ))}
         </div>
+        {canSeeMore && (
+          <div className="mt-10 flex justify-center">
+            <a
+              className="rounded-full border border-emerald-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-900 transition hover:border-emerald-400 hover:bg-emerald-50"
+              href="#portfolio-all"
+            >
+              See More
+            </a>
+          </div>
+        )}
       </div>
     </section>
   )

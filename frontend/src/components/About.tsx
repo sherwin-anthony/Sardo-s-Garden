@@ -4,16 +4,15 @@ import SectionIcon from './SectionIcon'
 export default function About() {
   return (
     <section id="about" className="py-20 sm:py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <div className="flex items-center gap-3">
             <SectionIcon />
-            <p className="text-xs uppercase tracking-[0.4em] text-emerald-700/80">About</p>
+            <h2 className="font-display text-3xl text-[color:var(--forest-900)] sm:text-4xl">
+              About Us
+            </h2>
           </div>
-          <h2 className="font-display mt-4 text-3xl text-[color:var(--forest-900)] sm:text-4xl">
-            {about.heading}
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-[color:var(--forest-800)]">{about.body}</p>
+          <p className="mt-3 text-sm leading-relaxed text-[color:var(--forest-800)]">{about.body}</p>
           <ul className="mt-6 space-y-3 text-sm text-[color:var(--forest-900)]">
             {about.highlights.map((item) => (
               <li key={item} className="flex items-center gap-3">

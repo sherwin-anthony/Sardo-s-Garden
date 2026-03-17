@@ -15,7 +15,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-6 pb-20 pt-8 md:grid-cols-[1.15fr_0.85fr] md:pt-12">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 pb-20 pt-8 sm:px-6 md:grid-cols-[1.15fr_0.85fr] md:pt-12">
         <div className="text-white">
           <div className="flex items-center gap-3 text-white/90 animate-fade">
            

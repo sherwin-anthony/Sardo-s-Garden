@@ -19,38 +19,55 @@ export const hero = {
 export const services = [
   {
     id: 'lawn-care',
-    title: 'Lawn Care',
+    title: 'Landscape Service',
     description:
-      'Weekly mowing, edging, fertilization, and seasonal cleanups for lush, healthy turf.',
-    icon: 'https://placehold.co/72x72?text=Lawn',
+      'Thoughtfully designed landscapes that balance beauty, function, and long-term value.',
+    icon: "/src/assets/service Lanscape.avif",
   },
   {
     id: 'garden-design',
-    title: 'Garden Design',
+    title: 'Garden Maintenance',
     description:
-      'Custom planting plans with native selections and year-round color palettes.',
-    icon: 'https://placehold.co/72x72?text=Design',
+      'Professional care to keep your garden healthy, refined, and consistently beautiful.',
+    icon: "/src/assets/service Maintenance.avif",
   },
   {
     id: 'hardscaping',
-    title: 'Hardscaping',
+    title: 'Garden Renovation',
     description:
-      'Patios, walkways, retaining walls, and outdoor living spaces built to last.',
-    icon: 'https://placehold.co/72x72?text=Stone',
+      'Reviving and enhancing existing gardens through careful redesign and plant selection.',
+    icon: "/src/assets/service Renovation.avif",
   },
   {
     id: 'tree-trimming',
-    title: 'Tree Trimming',
+    title: 'Supply and Delivery',
     description:
-      'Safety-first pruning that improves structure, light, and long-term tree health.',
-    icon: 'https://placehold.co/72x72?text=Trees',
+      'Quality plants and landscape materials sourced and delivered with care and expertise.',
+    icon: "/src/assets/service Supply.avif",
+  },
+  
+] as const
+
+export const whyChoose = [
+  {
+    id: 'why-1',
+    title: '🌿 20+ Years of Landscaping Expertise',
+    description: 'Work with a team of experienced professionals with over two decades of industry knowledge',
   },
   {
-    id: 'irrigation',
-    title: 'Irrigation Systems',
-    description:
-      'Smart irrigation installs and tune-ups to conserve water and protect plants.',
-    icon: 'https://placehold.co/72x72?text=Water',
+    id: 'why-2',
+    title: '🎨 Creative & Innovative Designs',
+    description: 'Choose from unique landscape concepts tailored to match your outdoor vision and lifestyle.',
+  },
+  {
+    id: 'why-3',
+    title: '🤝 Personalized Customer Service',
+    description: 'Enjoy dedicated support and a customized approach designed around your needs and budget.',
+  },
+  {
+    id: 'why-4',
+    title: '🏆 Award-Winning Quality & Trusted Workmanship',
+    description: 'Recognized as Asia’s Best Landscaping Company, delivering projects with contracts, warranties, and premium materials.',
   },
 ] as const
 
@@ -121,11 +138,36 @@ export const portfolio = [
   },
 ] as const
 
+export const processSteps = [
+  {
+    id: 'step-1',
+    title: 'Discovery Call',
+    description: 'We learn about your goals, style preferences, and budget range.',
+  },
+  {
+    id: 'step-2',
+    title: 'On-Site Assessment',
+    description: 'Our team evaluates the property and captures measurements and photos.',
+  },
+  {
+    id: 'step-3',
+    title: 'Design & Proposal',
+    description: 'You receive a tailored concept, plant list, and project timeline.',
+  },
+  {
+    id: 'step-4',
+    title: 'Build & Care',
+    description: 'We install the landscape and offer ongoing maintenance plans.',
+  },
+] as const
+
 export const transformations = [
   {
     id: 't-project-1',
     title: 'Backyard Garden Makeover',
     location: 'Laguna, Philippines',
+    description:
+      'Complete redesign featuring tropical plantings, natural stone pathways, and ambient lighting for outdoor relaxation.',
     category: 'Garden Design',
     beforeImage:
       'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
@@ -141,6 +183,8 @@ export const transformations = [
     id: 't-project-2',
     title: 'Courtyard Hardscape Refresh',
     location: 'Quezon City, Philippines',
+    description:
+      'A modern courtyard rebuild with layered hardscapes, drought-tolerant planting, and clean circulation paths.',
     category: 'Hardscaping',
     beforeImage:
       'https://images.unsplash.com/photo-1446071103084-c257b5f70672?auto=format&fit=crop&w=1400&q=80',
@@ -156,6 +200,8 @@ export const transformations = [
     id: 't-project-3',
     title: 'Lawn Renovation & Entry',
     location: 'Cebu, Philippines',
+    description:
+      'Revived curb appeal with fresh turf, stone edging, and seasonal planting beds for year-round color.',
     category: 'Lawn Renovation',
     beforeImage:
       'https://images.unsplash.com/photo-1457530378978-8bac673b8062?auto=format&fit=crop&w=1400&q=80',
@@ -165,6 +211,23 @@ export const transformations = [
       'Leveled and re-seeded turf',
       'Added stone edging',
       'Installed seasonal planting beds',
+    ],
+  },
+  {
+    id: 't-project-4',
+    title: 'Resort-Style Patio Upgrade',
+    location: 'Tagaytay, Philippines',
+    description:
+      'Introduced warm stone textures, layered lighting, and lush greenery for an elevated outdoor lounge.',
+    category: 'Hardscaping',
+    beforeImage:
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80',
+    afterImage:
+      'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=1400&q=80',
+    highlights: [
+      'Rebuilt patio foundation',
+      'Added layered lighting',
+      'Planted privacy hedges',
     ],
   },
 ] as const
@@ -205,6 +268,39 @@ export const testimonials = [
       'Thoughtful plant selection and impeccable workmanship. The new irrigation system is a game changer.',
     photo:
       'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80',
+  },
+] as const
+
+export const stories = [
+  {
+    id: 'story-1',
+    type: 'YouTube',
+    title: 'Backyard Resort Transformation',
+    summary: 'See how we turned a blank yard into a relaxing outdoor retreat.',
+    image:
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+    cta: 'Watch on YouTube',
+    href: '#',
+  },
+  {
+    id: 'story-2',
+    type: 'Blog',
+    title: '5 Planting Tips for Tropical Gardens',
+    summary: 'Our most requested advice for lush, low-maintenance tropical landscapes.',
+    image:
+      'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80',
+    cta: 'Read Story',
+    href: '#',
+  },
+  {
+    id: 'story-3',
+    type: 'YouTube',
+    title: 'Before & After: Courtyard Makeover',
+    summary: 'A quick walkthrough of a full courtyard hardscape refresh.',
+    image:
+      'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=1200&q=80',
+    cta: 'Watch on YouTube',
+    href: '#',
   },
 ] as const
 
@@ -292,7 +388,7 @@ export const plantCollections = [
 export const about = {
   heading: 'Rooted in Craft, Designed for Everyday Life',
   body:
-    'We are a full-service landscaping studio focused on sustainable designs, meticulous maintenance, and outdoor spaces that feel effortless. From small residential gardens to large commercial campuses, our team blends horticultural expertise with thoughtful design.',
+    'Sardo’s Garden is one of the Philippines’ trusted names in premium landscape design and construction, with over 23 years of professional landscaping experience.We are a full-service landscaping studio focused on sustainable designs, meticulous maintenance, and outdoor spaces that feel effortless. From small residential gardens to large commercial campuses, our team blends horticultural expertise with thoughtful design.We specialize in creating thoughtfully designed outdoor spaces that bring joy, bliss, and serenity into everyday living. Our work goes beyond aesthetics. Every garden we build is guided by intention, functionality, and long-term value.',
   image:
     'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
   highlights: [

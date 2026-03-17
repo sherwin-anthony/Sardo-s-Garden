@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear()
 export default function Footer() {
   return (
     <footer className="border-t border-emerald-100/70 bg-white/80">
-      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 md:grid-cols-[1.2fr_0.8fr]">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_0.8fr]">
         <div>
           <div className="flex items-center gap-3">
             <SectionIcon className="h-10 w-16" />

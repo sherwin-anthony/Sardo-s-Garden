@@ -4,17 +4,16 @@ import SectionIcon from './SectionIcon'
 export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-3">
               <SectionIcon />
-              <p className="text-xs uppercase tracking-[0.4em] text-emerald-700/80">Testimonials</p>
+              <h2 className="font-display text-3xl text-[color:var(--forest-900)] sm:text-4xl">
+                Client Testimonials
+              </h2>
             </div>
-            <h2 className="font-display mt-4 text-3xl text-[color:var(--forest-900)] sm:text-4xl">
-              Trusted by homeowners and property teams
-            </h2>
-            <p className="mt-3 max-w-xl text-sm text-[color:var(--forest-800)]">
+            <p className="mt-1 max-w-xl text-sm text-[color:var(--forest-800)]">
               We build long-term relationships through craftsmanship, communication, and care.
             </p>
           </div>

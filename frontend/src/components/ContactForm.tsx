@@ -4,14 +4,13 @@ import SectionIcon from './SectionIcon'
 export default function ContactForm() {
   return (
     <section id="quote" className="py-20 sm:py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-2xl bg-[color:var(--forest-900)] p-8 text-white shadow-[var(--shadow-lg)]">
           <div className="flex items-center gap-3">
-            <SectionIcon className="h-10 w-16 bg-white/95 ring-white/30" />
-            <p className="text-xs uppercase tracking-[0.4em] text-emerald-200/80">Get a Free Estimate</p>
+            <SectionIcon className="h-12 w-16 bg-white/95 ring-white/30" />
+            <h2 className="font-display text-3xl text-white sm:text-4xl">Contact:</h2>
           </div>
-          <h2 className="font-display mt-4 text-3xl sm:text-4xl">Tell us about your project</h2>
-          <p className="mt-4 text-sm text-white/80">
+          <p className="mt-3 text-sm text-white/80">
             Share your goals and we will follow up within one business day to schedule your on-site
             consultation.
           </p>

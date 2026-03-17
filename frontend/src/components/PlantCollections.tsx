@@ -36,19 +36,16 @@ export default function PlantCollections() {
 
   return (
     <section id="plants" className="py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-3">
               <SectionIcon />
-              <p className="text-xs uppercase tracking-[0.4em] text-emerald-700/80">
+              <h2 className="font-display text-3xl text-[color:var(--forest-900)] sm:text-4xl">
                 Our Plant Collections
-              </p>
+              </h2>
             </div>
-            <h2 className="font-display mt-4 text-3xl text-[color:var(--forest-900)] sm:text-4xl">
-              Curated plants for every landscape style
-            </h2>
-            <p className="mt-3 max-w-xl text-sm text-[color:var(--forest-800)]">
+            <p className="mt-1 max-w-xl text-sm text-[color:var(--forest-800)]">
               Learn about our favorite plant selections and the growing conditions they thrive in.
             </p>
           </div>

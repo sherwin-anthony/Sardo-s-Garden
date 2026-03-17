@@ -7,7 +7,7 @@ type SectionIconProps = {
 
 export default function SectionIcon({ className, imgClassName }: SectionIconProps) {
   const baseClass =
-    'h-9 w-14 overflow-hidden rounded-md bg-white/90 ring-1 ring-emerald-200/70 shadow-sm'
+    'h-12 w-16 overflow-hidden rounded-md bg-white/90 ring-1 ring-emerald-200/70 shadow-sm'
   const imageClass = 'h-full w-full object-contain p-1'
 
   return (
